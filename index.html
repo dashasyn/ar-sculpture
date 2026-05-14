@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AR Sculpture</title>
+
+    <!-- A-Frame -->
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+
+    <!-- AR.js with GPS -->
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+  </head>
+
+  <body style="margin: 0; overflow: hidden;">
+    
+    <a-scene
+      embedded
+      arjs="sourceType: webcam; gpsMinDistance: 5;"
+    >
+
+      <!-- Camera -->
+      <a-camera gps-camera rotation-reader></a-camera>
+
+      <!-- Your 3D object -->
+      <a-entity
+        gps-entity-place="latitude: 54.6854; longitude: 25.2867;"
+        gltf-model="model.glb"
+        scale="2 2 2"
+      >
+      </a-entity>
+
+    </a-scene>
+
+  </body>
+</html>
