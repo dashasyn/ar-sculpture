@@ -12,10 +12,12 @@
 
   <body style="margin: 0; overflow: hidden;">
     
-    <a-scene
-      embedded
-      arjs="sourceType: webcam; gpsMinDistance: 5;"
-    >
+  
+		<a-scene
+  vr-mode-ui="enabled: false"
+  embedded
+  arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
+>
 
       <!-- Camera -->
       <a-camera gps-camera rotation-reader></a-camera>
@@ -25,7 +27,6 @@
         gps-entity-place="latitude: 54.6854; longitude: 25.2867;"
         gltf-model="model.glb"
         scale="1 1 1"
-		position="0 0 0"
       >
       </a-entity>
 	
